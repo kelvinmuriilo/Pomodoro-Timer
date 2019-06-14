@@ -10,8 +10,6 @@ Fonte:
 
 
 <h2>Tela</h2>
-<<<<<<< HEAD
-<img src="imagens/Index.jpg">
-=======
-<img src="imagens/Index.JPG" width="750px" height="500px">
->>>>>>> ff6a5650d359e3e13481f25d64e3a091cfc93acc
+
+<img src="imagens/screenshot.PNG" width="950px" height="500px">
+
