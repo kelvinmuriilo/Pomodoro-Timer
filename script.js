@@ -71,6 +71,7 @@ function obterValores() {
 	window.localStorage.setItem('minutosPausaLonga', contadorMinutosPLonga)
 }
 /*
+
 function iniciarCronometro() {
 	var valorContadorSegundos = 60
 	if (statusCiclo == false && statusPausaCurta == false && statusPausaLonga == false) {
