@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Pomodoro Timer</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo_boot.css">
+
+
+</head>
+
+<body>
+	<div id="pageConfig" class="">
+		<img id="btnClose" src="imagens/close.png" onclick="configurar()">
+		<h2 id="tituloConfig">Configurações de Timer</h2>
+
+		<div id="conteudoConfig" class="d-flex justify-content-center">
+			<table cellspacing="100">
+				<tr>
+					<td><label>Tempo ciclo pomodoro:</label></td>
+					<td><input type="text" id="ciclo_pomodoro" maxlength="2"></td>
+				</tr>
+				<tr>
+					<td><label>Tempo pausa curta:</label></td>
+					<td><input type="text" id="pausa_curta" maxlength="2"></td>
+				</tr>
+				<tr>
+					<td><label>Tempo pausa longa:</label></td>
+					<td><input type="text" id="pausa_longa" maxlength="2"></td>
+				</tr>
+
+				<br />
+			</table>
+			<br />
+		</div>
+		<button onclick="obterValores()">Aplicar</button>
+	</div>
+
+	<div class="container">
+		<div id="cabecalho">
+			<img id="logo" src="imagens/pomodoro.png">
+			<h1>Pomodoro</h1>
+			<button id="btnConfig" onclick="configurar()">Configurações</button>
+		</div>
+		<div class="corpo">
+			<div id="coluna" class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div id="menu">
+							<div class="btn-group btn-group-toggle" data-toggle="buttons">
+								<label id="label1" class="btn btn-secondary">
+									<input type="radio" name="options" id="btnPomodoro" autocomplete="off"
+										onclick="timer('pomodoro')"> Pomodoro
+								</label>
+								<label id="label2" class="btn btn-secondary">
+									<input type="radio" name="options" id="btnPCurta" autocomplete="off"
+										onclick="timer('pausaCurta')"> Pausa Curta
+								</label>
+								<label id="label3" class="btn btn-secondary">
+									<input type="radio" name="options" id="btnPLonga" autocomplete="off"
+										onclick="pausaonga()"> Pausa Longa
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div id="timerPomodoro">
+							<span id="timer" class="estiloTimer"></span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="d-flex justify-content-center">
+						<div id="botoes">
+							<button class="btn btn-success" id="btnIniciar" onclick=""><img
+									src="imagens/play.png"></button>
+							<button class="btn btn-danger" id="btnPausar" onclick="pausarContagem()"><img
+									src="imagens/pause.png"></button>
+							<button class="btn btn-secondary" id="btnReiniciar" onclick="reiniciarContagem()"><img
+									src="imagens/reload.png"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="rodape" class="row">
+			<div class="col">
+				<div class="d-flex justify-content-center">
+					<div id="marca">
+						<h3>Kelvin Murilo &copy;</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

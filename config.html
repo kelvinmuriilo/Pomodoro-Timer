@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Configurações</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="estilo_config.css">
+	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<div  class="">
+					<div id="cabecalho">
+						<h2>Configurações do timer</h2>
+					</div>
+					<br/><br/>
+					<div id="corpo" class="">
+						<label>Tempo ciclo pomodoro:</label>
+						<input type="text" id="ciclo_pomodoro"> <br/>
+
+						<label>Tempo pausa curta:</label>
+						<input type="text" id="pausa_curta"><br/>
+
+						<label>Tempo pausa longa:</label>
+						<input type="text" id="pausa_longa"><br/>
+						<button onclick="obterValores()">Aplicar</button>
+						<button onclick="window.location.href = 'index.html'">Voltar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+<script>
+	function obterValores(){
+		valorContadorMinutos = document.getElementById('ciclo_pomodoro').value
+		contadorMinutos = document.getElementById('pausa_curta').value
+		contadorMinutosPLonga = document.getElementById('pausa_longa').value
+		//console.log("Cilco: " + valorContadorMinutos + ', Pcurta: ' + contadorMinutos + ', Longa: ' + contadorMinutosPcurta)
+		
+		window.localStorage.setItem('minutosDoContador', valorContadorMinutos)
+		window.localStorage.setItem('minutosPausaCurta', contadorMinutos)
+		window.localStorage.setItem('minutosPausaLonga', contadorMinutosPLonga)
+	}
+</script>
+</body>
+</html>
