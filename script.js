@@ -1,8 +1,8 @@
 //-----------------------------------------POMODORO TIMER ----------------------------------------------//
 /*Desenvolvido por Kelvin Murilo*/
-var padraoMinutoPomodoro = 24
-var padraoMinutoCurta = 4
-var padraoMinutoLonga = 9
+const padraoMinutoPomodoro = 24
+const padraoMinutoCurta = 4
+const padraoMinutoLonga = 9
 var contadorMinutosCiclo = window.localStorage.getItem('minutosDoContador') - 1 //Minutos do ciclo Pomodoro
 var valorMinutosPlonga = window.localStorage.getItem('minutosPausaLonga') - 1 //Minutos da pausa longa
 var valorMinutosPcurta = window.localStorage.getItem('minutosPausaCurta') - 1 //Minutos pausa curta
@@ -29,6 +29,11 @@ function timer(tipoPomodoro) {
 	if (tipoPomodoro === 'pausaCurta') {
 		let minutos = valorMinutosPcurta
 		ciclo(minutos, valorMinutosPcurta, padraoMinutoCurta)
+	}
+
+	if(tipoPomodoro === 'pausaLonga'){
+		let minutos = valorMinutosPlonga
+		ciclo(minutos,valorMinutosPlonga,padraoMinutoLonga)
 	}
 }
 
