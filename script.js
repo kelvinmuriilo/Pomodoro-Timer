@@ -236,7 +236,7 @@ function pausaCurta() {
 	}
 	return statusPausaCurta
 }
-
+*/
 var statusConfigurar = false
 
 function configurar() {
@@ -277,4 +277,4 @@ function activeMenu() {
 
 
 }
-*/
+
