@@ -61,7 +61,7 @@ function ciclo(valorMinuto, valorGlobalMinuto, valorMinutoPadrao) {
 	}, 1000)
 }
 
-/*
+
 function obterValores() {
 	let contadorMinutosCiclo = document.getElementById('ciclo_pomodoro').value // Minutos do ciclo pomodoro
 	let contadorMinutos = document.getElementById('pausa_curta').value 		   // Minutos da pausa curta
@@ -70,7 +70,7 @@ function obterValores() {
 	window.localStorage.setItem('minutosPausaCurta', contadorMinutos)
 	window.localStorage.setItem('minutosPausaLonga', contadorMinutosPLonga)
 }
-
+/*
 function iniciarCronometro() {
 	var valorContadorSegundos = 60
 	if (statusCiclo == false && statusPausaCurta == false && statusPausaLonga == false) {
